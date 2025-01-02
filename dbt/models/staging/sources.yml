@@ -8,6 +8,10 @@ sources:
     loaded_at_field: '[result.properties.edited]'
     tables:
       - name: People
+        description: People/Character data from Swapi
       - name: Films
+        description: Film data from Swapi
       - name: Planets
+        description: Planet data from Swapi
       - name: Vehicles
+        description: Vehicle data from Swapi
