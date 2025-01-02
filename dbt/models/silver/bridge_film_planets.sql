@@ -11,7 +11,7 @@ deduplicated as (
 openedJson as (
     select
         film_id,
-        value AS planet_id
+        cast(value as varchar(100))  AS planet_id
     FROM 
         deduplicated
     CROSS APPLY 
