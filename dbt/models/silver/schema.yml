@@ -1,3 +1,10 @@
 models:
-  - name: model_name
-    description: description
+  - name: characters
+    description: Charatecters from all movies
+  - name: films
+    description: Details of first six star wars films
+  - name: planets
+    description: Planets featured in Star Wars universe
+  - name: bridge_film_characters
+  - name: bridge_film_planets
+  - name: bridge_film_vehicles
