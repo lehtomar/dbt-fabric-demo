@@ -1,5 +1,6 @@
 sources:
   - name: Dagobah
+    description: Dagobah Lakehouse, it is. In the murky depths of Fabric Lakehouse, stored Star Wars API data is. A repository of knowledge, it serves, strong with the Force of information. Terrain, climate, population, and notable residents, preserved here are. A hub for exploration and learning, Dagobah Lakehouse has become.
     database: Dagobah
     schema: dbo
     freshness:
