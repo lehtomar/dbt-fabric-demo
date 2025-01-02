@@ -1,6 +1,0 @@
-sources:
-  - name: Dagobah
-    database: Dagobah
-    schema: dbo
-    tables:
-      - name: table_name

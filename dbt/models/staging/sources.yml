@@ -1,0 +1,9 @@
+sources:
+  - name: Dagobah
+    database: Dagobah
+    schema: dbo
+    tables:
+      - name: People
+      - name: Films
+      - name: Planets
+      - name: Vehicles
