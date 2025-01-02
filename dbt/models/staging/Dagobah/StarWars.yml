@@ -1,0 +1,5 @@
+groups:
+  - name: star_wars
+    owner:
+      email: markus.lehtola@zure.com
+

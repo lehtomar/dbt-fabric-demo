@@ -37,9 +37,12 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 models:
   Star_Wars:
-    sources:
+    staging:
       +materialized: view
+      +group: star_wars
     silver:
       +materialized: table
+      +group: star_wars
     gold:
       +materialized: view
+      +group: star_wars
