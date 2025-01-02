@@ -9,7 +9,7 @@ source as (
 renamed as (
 
     select
-        [result.properties.url] as people_id,
+        [result.properties.url] as character_id,
         [result.properties.name] as name,
         [result.properties.height] as height,
         [result.properties.mass] as mass,

@@ -1,6 +1,6 @@
 with source as (
     select
-        [people_id],
+        [character_id],
         [name],
         [height],
         [mass],
@@ -18,11 +18,11 @@ with source as (
 subset as (
     select
         *,
-        row_number() over (partition by [people_id] order by [edited] desc) as row_num
+        row_number() over (partition by [character_id] order by [edited] desc) as row_num
     from source
 )
 select
-    [people_id],
+    [character_id],
     [name],
     [height],
     [mass],
