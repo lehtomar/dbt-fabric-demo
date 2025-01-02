@@ -21,5 +21,8 @@ models:
           - unique
           - not_null
   - name: bridge_film_characters
+    description: Bridge between characters and characters
   - name: bridge_film_planets
+    description: Bridge between characters and planets
   - name: bridge_film_vehicles
+    description: Bridge between characters and vehicles
