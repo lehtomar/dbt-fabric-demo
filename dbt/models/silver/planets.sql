@@ -17,7 +17,6 @@ subset as (
         [terrain],
         [created],
         [edited],
-        surface_water,
         [description],
         row_number() over (partition by [planet_id] order by [edited] desc) as row_num
     from source
