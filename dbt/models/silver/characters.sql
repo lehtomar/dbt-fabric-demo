@@ -35,4 +35,4 @@ select
     [edited],
     [planet_id],
     [description]
-from subset
+from subset where row_num = 1
