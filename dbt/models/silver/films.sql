@@ -11,7 +11,7 @@ subset as (
         film_id,
         title,
         episode,
-        release_date,
+        cast(release_date as date) as release_date,
         producer,
         opening_crawl,
         director,

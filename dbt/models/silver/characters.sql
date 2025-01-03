@@ -2,8 +2,8 @@ with source as (
     select
         [character_id],
         [name],
-        [height],
-        [mass],
+        {{ replace_and_cast('[height]', 'unknown', 'int') }} as [height],
+        {{ replace_and_cast('[mass]', 'unknown', 'float') }} as [mass],
         [hair_color],
         [skin_color],
         [eye_color],
