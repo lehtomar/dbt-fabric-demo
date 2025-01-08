@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Star Wars report"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "774f205b-9bec-493e-8692-635e5b2c7ae0"
+  }
+}

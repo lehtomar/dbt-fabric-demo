@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Warehouse",
+    "displayName": "Coruscant"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "c677c57f-277d-4284-a02e-0fdb246c1b98"
+  }
+}

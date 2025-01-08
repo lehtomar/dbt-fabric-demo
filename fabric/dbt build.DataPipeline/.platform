@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "DataPipeline",
+    "displayName": "dbt build"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "38fcd41b-23d2-4d48-b865-021a0e4b1c04"
+  }
+}
