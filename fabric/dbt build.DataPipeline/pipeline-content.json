@@ -1,0 +1,40 @@
+{
+  "properties": {
+    "activities": [
+      {
+        "name": "dbt job",
+        "type": "WebActivity",
+        "dependsOn": [],
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureOutput": false,
+          "secureInput": false
+        },
+        "typeProperties": {
+          "method": "POST",
+          "headers": {
+            "Authorization": {
+              "value": "@pipeline().parameters.dbttoken",
+              "type": "Expression"
+            },
+            "Content-type": "application/json"
+          },
+          "relativeUrl": "784877/run/",
+          "body": {
+            "cause": "Triggered via API"
+          }
+        },
+        "externalReferences": {
+          "connection": "46664d63-a839-4b7f-b17c-b8e03d2d0348"
+        }
+      }
+    ],
+    "parameters": {
+      "dbttoken": {
+        "type": "string"
+      }
+    }
+  }
+}
