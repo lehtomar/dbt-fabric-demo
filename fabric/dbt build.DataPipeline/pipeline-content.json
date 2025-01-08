@@ -15,7 +15,10 @@
         "typeProperties": {
           "method": "POST",
           "headers": {
-            "Authorization": "Token dbtc_sSE6PIQ-6imdoclbcrCPURSUznKPwH0E1zUKgxLoERPAiLGJ-U",
+            "Authorization": {
+              "value": "@pipeline().parameters.dbttoken",
+              "type": "Expression"
+            },
             "Content-type": "application/json"
           },
           "relativeUrl": "784877/run/",
@@ -27,6 +30,11 @@
           "connection": "46664d63-a839-4b7f-b17c-b8e03d2d0348"
         }
       }
-    ]
+    ],
+    "parameters": {
+      "dbttoken": {
+        "type": "string"
+      }
+    }
   }
 }
