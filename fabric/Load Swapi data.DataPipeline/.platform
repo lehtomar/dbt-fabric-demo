@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "DataPipeline",
+    "displayName": "Load Swapi data"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "681b1281-706f-45ce-9fe5-130f13e54cba"
+  }
+}
