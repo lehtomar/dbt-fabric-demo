@@ -1,3 +1,4 @@
+-- Auto Generated (Do not modify) A60C9FB2DEF88FC5F2C67B0FF962EE19A4CDCCAF5DB3E0A5E051BAA73E0B6682
 create view "prod"."stg_Dagobah__Planets" as with 
 
 source as (

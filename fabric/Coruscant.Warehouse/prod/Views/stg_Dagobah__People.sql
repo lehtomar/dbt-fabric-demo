@@ -1,3 +1,4 @@
+-- Auto Generated (Do not modify) 1FB816E610441DFAF2FABE851418FBEC73F84289A69843597661A80BF1792525
 create view "prod"."stg_Dagobah__People" as with 
 
 source as (

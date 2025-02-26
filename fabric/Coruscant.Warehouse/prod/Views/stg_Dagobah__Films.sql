@@ -1,3 +1,4 @@
+-- Auto Generated (Do not modify) 7F02F7F5D925F0EBDDE866D05510955B87723DD1A956875D2CEF931E7F99D7E3
 create view "prod"."stg_Dagobah__Films" as with 
 
 source as (
