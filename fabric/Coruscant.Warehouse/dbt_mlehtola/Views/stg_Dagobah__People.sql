@@ -1,3 +1,4 @@
+-- Auto Generated (Do not modify) 82E2DACC5C828F897EA02777010D62A59440CD997C1878C5EDFBA5A70FC1EA05
 create view "dbt_mlehtola"."stg_Dagobah__People" as with 
 
 source as (

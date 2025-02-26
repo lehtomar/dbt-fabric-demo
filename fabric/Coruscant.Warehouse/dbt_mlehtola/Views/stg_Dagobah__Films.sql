@@ -1,3 +1,4 @@
+-- Auto Generated (Do not modify) 8BFAA8218131E722FB533759819F5A995F67D12F773F5E66733327617EA84405
 create view "dbt_mlehtola"."stg_Dagobah__Films" as with 
 
 source as (

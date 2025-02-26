@@ -2753,10 +2753,25 @@
             ]
           },
           {
-            "name": "created",
+            "name": "description",
             "dataType": "string",
-            "sourceColumn": "created",
+            "sourceColumn": "description",
             "sourceProviderType": "varchar",
+            "sourceLineageTag": "description",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "created",
+            "dataType": "dateTime",
+            "sourceColumn": "created",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2",
             "sourceLineageTag": "created",
             "summarizeBy": "none",
             "annotations": [
@@ -2768,9 +2783,260 @@
           },
           {
             "name": "edited",
-            "dataType": "string",
+            "dataType": "dateTime",
             "sourceColumn": "edited",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2",
+            "sourceLineageTag": "edited",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "stg_Dagobah__Planets",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "dbt_mlehtola"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "stg_Dagobah__Vehicles",
+        "sourceLineageTag": "[dbt_mlehtola].[stg_Dagobah__Vehicles]",
+        "columns": [
+          {
+            "name": "vehicle_id",
+            "dataType": "string",
+            "sourceColumn": "vehicle_id",
             "sourceProviderType": "varchar",
+            "sourceLineageTag": "vehicle_id",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "name",
+            "dataType": "string",
+            "sourceColumn": "name",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "name",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "model",
+            "dataType": "string",
+            "sourceColumn": "model",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "model",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "vehicle_class",
+            "dataType": "string",
+            "sourceColumn": "vehicle_class",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "vehicle_class",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "manufacturer",
+            "dataType": "string",
+            "sourceColumn": "manufacturer",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "manufacturer",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "cost_in_credits",
+            "dataType": "string",
+            "sourceColumn": "cost_in_credits",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "cost_in_credits",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "length",
+            "dataType": "string",
+            "sourceColumn": "length",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "length",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "crew",
+            "dataType": "string",
+            "sourceColumn": "crew",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "crew",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "passengers",
+            "dataType": "string",
+            "sourceColumn": "passengers",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "passengers",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "max_atmosphering_speed",
+            "dataType": "string",
+            "sourceColumn": "max_atmosphering_speed",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "max_atmosphering_speed",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "cargo_capacity",
+            "dataType": "string",
+            "sourceColumn": "cargo_capacity",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "cargo_capacity",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "consumables",
+            "dataType": "string",
+            "sourceColumn": "consumables",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "consumables",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "films",
+            "dataType": "string",
+            "sourceColumn": "films",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "films",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "pilots",
+            "dataType": "string",
+            "sourceColumn": "pilots",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "pilots",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "created",
+            "dataType": "dateTime",
+            "sourceColumn": "created",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2",
+            "sourceLineageTag": "created",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "edited",
+            "dataType": "dateTime",
+            "sourceColumn": "edited",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2",
             "sourceLineageTag": "edited",
             "summarizeBy": "none",
             "annotations": [
@@ -2801,7 +3067,271 @@
             "mode": "directLake",
             "source": {
               "type": "entity",
-              "entityName": "stg_Dagobah__Planets",
+              "entityName": "stg_Dagobah__Vehicles",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "dbt_mlehtola"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "vehicles",
+        "sourceLineageTag": "[dbt_mlehtola].[vehicles]",
+        "columns": [
+          {
+            "name": "vehicle_id",
+            "dataType": "string",
+            "sourceColumn": "vehicle_id",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "vehicle_id",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "name",
+            "dataType": "string",
+            "sourceColumn": "name",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "name",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "model",
+            "dataType": "string",
+            "sourceColumn": "model",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "model",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "vehicle_class",
+            "dataType": "string",
+            "sourceColumn": "vehicle_class",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "vehicle_class",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "manufacturer",
+            "dataType": "string",
+            "sourceColumn": "manufacturer",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "manufacturer",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "cost_in_credits",
+            "dataType": "string",
+            "sourceColumn": "cost_in_credits",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "cost_in_credits",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "length",
+            "dataType": "string",
+            "sourceColumn": "length",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "length",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "crew",
+            "dataType": "string",
+            "sourceColumn": "crew",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "crew",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "passengers",
+            "dataType": "string",
+            "sourceColumn": "passengers",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "passengers",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "max_atmosphering_speed",
+            "dataType": "string",
+            "sourceColumn": "max_atmosphering_speed",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "max_atmosphering_speed",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "cargo_capacity",
+            "dataType": "string",
+            "sourceColumn": "cargo_capacity",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "cargo_capacity",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "consumables",
+            "dataType": "string",
+            "sourceColumn": "consumables",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "consumables",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "films",
+            "dataType": "string",
+            "sourceColumn": "films",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "films",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "pilots",
+            "dataType": "string",
+            "sourceColumn": "pilots",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "pilots",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "created",
+            "dataType": "dateTime",
+            "sourceColumn": "created",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2",
+            "sourceLineageTag": "created",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "edited",
+            "dataType": "dateTime",
+            "sourceColumn": "edited",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2",
+            "sourceLineageTag": "edited",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "description",
+            "dataType": "string",
+            "sourceColumn": "description",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "description",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "vehicles",
               "expressionSource": "DatabaseQuery",
               "schemaName": "dbt_mlehtola"
             }
@@ -2817,23 +3347,31 @@
     ],
     "relationships": [
       {
-        "name": "2f727d7fe829817265627403330ed222",
-        "fromCardinality": "one",
-        "fromTable": "films",
+        "name": "358b613eec60910d32eda06cec6ea007",
+        "fromTable": "bridge_film_vehicles",
         "fromColumn": "film_id",
-        "toTable": "bridge_film_vehicles",
+        "toTable": "films",
+        "toColumn": "film_id",
+        "relyOnReferentialIntegrity": true,
+        "securityFilteringBehavior": "none"
+      },
+      {
+        "name": "5e4352d8e008c5cdbd9b1babdbba0ffb",
+        "fromTable": "bridge_film_characters",
+        "fromColumn": "film_id",
+        "toTable": "films",
         "toColumn": "film_id",
         "crossFilteringBehavior": "bothDirections"
       },
       {
-        "name": "690191eecb6eee8fbffbac7003d4739d",
+        "name": "63760d871044af54381a34e01cab0092",
         "fromTable": "bridge_film_characters",
         "fromColumn": "character_id",
         "toTable": "characters",
         "toColumn": "character_id"
       },
       {
-        "name": "a4fd869400241474b0a339ac4147a712",
+        "name": "792fb2eb1ceb6afcd3599a7466d9505e",
         "fromCardinality": "one",
         "fromTable": "films",
         "fromColumn": "film_id",
@@ -2842,10 +3380,20 @@
         "crossFilteringBehavior": "bothDirections"
       },
       {
-        "name": "d66dbac96457133a07cef8ee43e92a3e",
-        "fromTable": "bridge_film_characters",
+        "name": "c1b01e56bb220e89f9039f50336a6cbb",
+        "fromTable": "bridge_film_planets",
         "fromColumn": "film_id",
         "toTable": "films",
+        "toColumn": "film_id",
+        "relyOnReferentialIntegrity": true,
+        "securityFilteringBehavior": "none"
+      },
+      {
+        "name": "df1654e20ca379f59e10db3b562faede",
+        "fromCardinality": "one",
+        "fromTable": "films",
+        "fromColumn": "film_id",
+        "toTable": "bridge_film_vehicles",
         "toColumn": "film_id",
         "crossFilteringBehavior": "bothDirections"
       }

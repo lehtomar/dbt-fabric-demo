@@ -15,11 +15,24 @@
         "name": "SharedResources",
         "type": 2
       }
+    },
+    {
+      "resourcePackage": {
+        "items": [
+          {
+            "name": "image9356376624320546.png",
+            "path": "image9356376624320546.png",
+            "type": 100
+          }
+        ],
+        "name": "RegisteredResources",
+        "type": 1
+      }
     }
   ],
   "sections": [
     {
-      "config": "{}",
+      "config": "{\"objects\":{\"outspace\":[{\"properties\":{\"image\":{\"image\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'image.png'\"}}},\"url\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"image9356376624320546.png\"}}},\"scaling\":{\"expr\":{\"Literal\":{\"Value\":\"'Fill'\"}}}}}}}]}}",
       "displayName": "Planets",
       "displayOption": 1,
       "filters": "[]",
@@ -27,21 +40,21 @@
       "name": "f96dc5deb2f2688bcfbc",
       "visualContainers": [
         {
-          "config": "{\"name\":\"e88d3b5bf4e42107c866\",\"layouts\":[{\"id\":0,\"position\":{\"x\":368,\"y\":80,\"z\":2000,\"width\":416,\"height\":640,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"prod.planets.name\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(prod.planets.population)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"prod.planets\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"name\"},\"Name\":\"prod.planets.name\",\"NativeReferenceName\":\"name\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"population\"}},\"Function\":0},\"Name\":\"Sum(prod.planets.population)\",\"NativeReferenceName\":\"Sum of population\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"population\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":6,\"Percent\":0}}}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Most populous planets'\"}}}}}]}}}",
+          "config": "{\"name\":\"548d40a6e4ba983381f1\",\"layouts\":[{\"id\":0,\"position\":{\"x\":468.15584415584414,\"y\":48,\"z\":2001,\"width\":415.79220779220776,\"height\":640.2077922077922,\"tabOrder\":2001}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"prod.planets.name\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(prod.planets.population)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"prod.planets\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"name\"},\"Name\":\"prod.planets.name\",\"NativeReferenceName\":\"name\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"population\"}},\"Function\":0},\"Name\":\"Sum(prod.planets.population)\",\"NativeReferenceName\":\"Sum of population\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"population\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":6,\"Percent\":0}}}}}}}],\"categoryAxis\":[{\"properties\":{\"titleColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"labelColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}}}],\"valueAxis\":[{\"properties\":{\"labelColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"titleColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Most populous planets'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}}}],\"background\":[{\"properties\":{\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"35D\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"padding\":[{\"properties\":{\"top\":{\"expr\":{\"Literal\":{\"Value\":\"5D\"}}}}}]}}}",
           "filters": "[]",
-          "height": 640.00,
-          "width": 416.00,
-          "x": 368.00,
-          "y": 80.00,
-          "z": 2000.00
+          "height": 640.21,
+          "width": 415.79,
+          "x": 468.16,
+          "y": 48.00,
+          "z": 2001.00
         },
         {
-          "config": "{\"name\":\"f2b091cbb789db08f36d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":80,\"z\":0,\"width\":416,\"height\":640,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"prod.homeworld_rank.homeworld\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(prod.homeworld_rank.character_count)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"h\",\"Entity\":\"prod.homeworld_rank\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"homeworld\"},\"Name\":\"prod.homeworld_rank.homeworld\",\"NativeReferenceName\":\"homeworld\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"character_count\"}},\"Function\":0},\"Name\":\"Sum(prod.homeworld_rank.character_count)\",\"NativeReferenceName\":\"Sum of character_count\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"character_count\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":6,\"Percent\":0}}}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Most common homeworlds'\"}}}}}]}}}",
+          "config": "{\"name\":\"f2b091cbb789db08f36d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":48,\"z\":0,\"width\":415.79220779220776,\"height\":640.2077922077922,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"prod.homeworld_rank.homeworld\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(prod.homeworld_rank.character_count)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"h\",\"Entity\":\"prod.homeworld_rank\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"homeworld\"},\"Name\":\"prod.homeworld_rank.homeworld\",\"NativeReferenceName\":\"homeworld\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"character_count\"}},\"Function\":0},\"Name\":\"Sum(prod.homeworld_rank.character_count)\",\"NativeReferenceName\":\"Sum of character_count\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"character_count\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":6,\"Percent\":0}}}}}}}],\"categoryAxis\":[{\"properties\":{\"titleColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"labelColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}}}],\"valueAxis\":[{\"properties\":{\"labelColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"titleColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Most common homeworlds'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}}}],\"background\":[{\"properties\":{\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"35D\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"padding\":[{\"properties\":{\"top\":{\"expr\":{\"Literal\":{\"Value\":\"5D\"}}}}}]}}}",
           "filters": "[]",
-          "height": 640.00,
-          "width": 416.00,
+          "height": 640.21,
+          "width": 415.79,
           "x": 0.00,
-          "y": 80.00,
+          "y": 48.00,
           "z": 0.00
         }
       ],
