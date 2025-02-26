@@ -1,0 +1,1153 @@
+{
+  "properties": {
+    "activities": [
+      {
+        "type": "ForEach",
+        "typeProperties": {
+          "isSequential": true,
+          "items": {
+            "value": "@range(1,84)",
+            "type": "Expression"
+          },
+          "activities": [
+            {
+              "type": "Copy",
+              "typeProperties": {
+                "source": {
+                  "type": "RestSource",
+                  "requestMethod": "GET",
+                  "httpRequestTimeout": "00:01:40",
+                  "requestInterval": "00.00:00:00.100",
+                  "datasetSettings": {
+                    "type": "RestResource",
+                    "typeProperties": {
+                      "relativeUrl": {
+                        "value": "people/@{item()}",
+                        "type": "Expression"
+                      }
+                    },
+                    "schema": [],
+                    "externalReferences": {
+                      "connection": "b1aeb3c1-f68e-4af6-9cb4-9ba084778a8f"
+                    },
+                    "annotations": []
+                  }
+                },
+                "sink": {
+                  "type": "LakehouseTableSink",
+                  "tableActionOption": "Append",
+                  "partitionOption": "None",
+                  "datasetSettings": {
+                    "type": "LakehouseTable",
+                    "typeProperties": {
+                      "table": "People"
+                    },
+                    "schema": [],
+                    "linkedService": {
+                      "name": "Dagobah",
+                      "properties": {
+                        "type": "Lakehouse",
+                        "typeProperties": {
+                          "artifactId": "3534d42a-46a4-4b50-af7f-c766e641c9bf",
+                          "workspaceId": "00000000-0000-0000-0000-000000000000",
+                          "rootFolder": "Tables"
+                        },
+                        "annotations": []
+                      }
+                    },
+                    "annotations": []
+                  }
+                },
+                "translator": {
+                  "type": "TabularTranslator",
+                  "mappings": [
+                    {
+                      "source": {
+                        "name": "message",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "message",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "result.properties.height",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "result.properties.height",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "result.properties.mass",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "result.properties.mass",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "result.properties.hair_color",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "result.properties.hair_color",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "result.properties.skin_color",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "result.properties.skin_color",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "result.properties.eye_color",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "result.properties.eye_color",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "result.properties.birth_year",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "result.properties.birth_year",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "result.properties.gender",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "result.properties.gender",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "result.properties.created",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "result.properties.created",
+                        "physicalType": "timestamp"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "result.properties.edited",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "result.properties.edited",
+                        "physicalType": "timestamp"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "result.properties.name",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "result.properties.name",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "result.properties.homeworld",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "result.properties.homeworld",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "result.properties.url",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "result.properties.url",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "result.description",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "result.description",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "result._id",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "result._id",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "result.uid",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "result.uid",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "result.__v",
+                        "type": "Int64"
+                      },
+                      "sink": {
+                        "name": "result.__v",
+                        "physicalType": "long"
+                      }
+                    }
+                  ],
+                  "collectionReference": "",
+                  "typeConversion": true,
+                  "typeConversionSettings": {
+                    "allowDataTruncation": true,
+                    "treatBooleanAsNumber": false
+                  },
+                  "columnFlattenSettings": {
+                    "treatArrayAsString": false,
+                    "treatStructAsString": false,
+                    "flattenColumnDelimiter": "."
+                  }
+                },
+                "enableStaging": false
+              },
+              "policy": {
+                "timeout": "0.12:00:00",
+                "retry": 4,
+                "retryIntervalInSeconds": 30,
+                "secureInput": false,
+                "secureOutput": false
+              },
+              "name": "People swapi",
+              "dependsOn": []
+            }
+          ]
+        },
+        "name": "People loop",
+        "dependsOn": []
+      },
+      {
+        "type": "ForEach",
+        "typeProperties": {
+          "isSequential": true,
+          "items": {
+            "value": "@range(1,60)",
+            "type": "Expression"
+          },
+          "activities": [
+            {
+              "type": "Copy",
+              "typeProperties": {
+                "source": {
+                  "type": "RestSource",
+                  "requestMethod": "GET",
+                  "httpRequestTimeout": "00:01:40",
+                  "requestInterval": "00.00:00:00.100",
+                  "datasetSettings": {
+                    "type": "RestResource",
+                    "typeProperties": {
+                      "relativeUrl": {
+                        "value": "planets/@{item()}",
+                        "type": "Expression"
+                      }
+                    },
+                    "schema": [],
+                    "externalReferences": {
+                      "connection": "b1aeb3c1-f68e-4af6-9cb4-9ba084778a8f"
+                    },
+                    "annotations": []
+                  }
+                },
+                "sink": {
+                  "type": "LakehouseTableSink",
+                  "tableActionOption": "Append",
+                  "partitionOption": "None",
+                  "datasetSettings": {
+                    "type": "LakehouseTable",
+                    "typeProperties": {
+                      "table": "Planets"
+                    },
+                    "schema": [],
+                    "linkedService": {
+                      "name": "Dagobah",
+                      "properties": {
+                        "type": "Lakehouse",
+                        "typeProperties": {
+                          "artifactId": "3534d42a-46a4-4b50-af7f-c766e641c9bf",
+                          "workspaceId": "00000000-0000-0000-0000-000000000000",
+                          "rootFolder": "Tables"
+                        },
+                        "annotations": []
+                      }
+                    },
+                    "annotations": []
+                  }
+                },
+                "translator": {
+                  "type": "TabularTranslator",
+                  "mappings": [
+                    {
+                      "source": {
+                        "name": "message",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "message",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "result.properties.diameter",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "result.properties.diameter",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "result.properties.rotation_period",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "result.properties.rotation_period",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "result.properties.orbital_period",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "result.properties.orbital_period",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "result.properties.gravity",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "result.properties.gravity",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "result.properties.population",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "result.properties.population",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "result.properties.climate",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "result.properties.climate",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "result.properties.terrain",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "result.properties.terrain",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "result.properties.surface_water",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "result.properties.surface_water",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "result.properties.created",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "result.properties.created",
+                        "physicalType": "timestamp"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "result.properties.edited",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "result.properties.edited",
+                        "physicalType": "timestamp"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "result.properties.name",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "result.properties.name",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "result.properties.url",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "result.properties.url",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "result.description",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "result.description",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "result._id",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "result._id",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "result.uid",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "result.uid",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "result.__v",
+                        "type": "Int64"
+                      },
+                      "sink": {
+                        "name": "result.__v",
+                        "physicalType": "long"
+                      }
+                    }
+                  ],
+                  "collectionReference": "",
+                  "typeConversion": true,
+                  "typeConversionSettings": {
+                    "allowDataTruncation": true,
+                    "treatBooleanAsNumber": false
+                  },
+                  "columnFlattenSettings": {
+                    "treatArrayAsString": false,
+                    "treatStructAsString": false,
+                    "flattenColumnDelimiter": "."
+                  }
+                },
+                "enableStaging": false
+              },
+              "policy": {
+                "timeout": "0.12:00:00",
+                "retry": 4,
+                "retryIntervalInSeconds": 30,
+                "secureInput": false,
+                "secureOutput": false
+              },
+              "name": "Planets",
+              "dependsOn": []
+            }
+          ]
+        },
+        "name": "Planets loop",
+        "dependsOn": []
+      },
+      {
+        "type": "ForEach",
+        "typeProperties": {
+          "isSequential": true,
+          "items": {
+            "value": "@range(1,6)",
+            "type": "Expression"
+          },
+          "activities": [
+            {
+              "type": "Copy",
+              "typeProperties": {
+                "source": {
+                  "type": "RestSource",
+                  "requestMethod": "GET",
+                  "httpRequestTimeout": "00:01:40",
+                  "requestInterval": "00.00:00:00.100",
+                  "datasetSettings": {
+                    "type": "RestResource",
+                    "typeProperties": {
+                      "relativeUrl": {
+                        "value": "films/@{item()}",
+                        "type": "Expression"
+                      }
+                    },
+                    "schema": [],
+                    "externalReferences": {
+                      "connection": "b1aeb3c1-f68e-4af6-9cb4-9ba084778a8f"
+                    },
+                    "annotations": []
+                  }
+                },
+                "sink": {
+                  "type": "LakehouseTableSink",
+                  "tableActionOption": "Append",
+                  "partitionOption": "None",
+                  "datasetSettings": {
+                    "type": "LakehouseTable",
+                    "typeProperties": {
+                      "table": "Films"
+                    },
+                    "schema": [],
+                    "linkedService": {
+                      "name": "Dagobah",
+                      "properties": {
+                        "type": "Lakehouse",
+                        "typeProperties": {
+                          "artifactId": "3534d42a-46a4-4b50-af7f-c766e641c9bf",
+                          "workspaceId": "00000000-0000-0000-0000-000000000000",
+                          "rootFolder": "Tables"
+                        },
+                        "annotations": []
+                      }
+                    },
+                    "annotations": []
+                  }
+                },
+                "translator": {
+                  "type": "TabularTranslator",
+                  "mappings": [
+                    {
+                      "source": {
+                        "name": "message",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "message",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "result.properties.characters",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "result.properties.characters",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "result.properties.planets",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "result.properties.planets",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "result.properties.starships",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "result.properties.starships",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "result.properties.vehicles",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "result.properties.vehicles",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "result.properties.species",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "result.properties.species",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "result.properties.created",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "result.properties.created",
+                        "physicalType": "timestamp"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "result.properties.edited",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "result.properties.edited",
+                        "physicalType": "timestamp"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "result.properties.producer",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "result.properties.producer",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "result.properties.title",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "result.properties.title",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "result.properties.episode_id",
+                        "type": "Int64"
+                      },
+                      "sink": {
+                        "name": "result.properties.episode_id",
+                        "physicalType": "long"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "result.properties.director",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "result.properties.director",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "result.properties.release_date",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "result.properties.release_date",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "result.properties.opening_crawl",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "result.properties.opening_crawl",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "result.properties.url",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "result.properties.url",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "result.description",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "result.description",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "result._id",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "result._id",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "result.uid",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "result.uid",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "result.__v",
+                        "type": "Int64"
+                      },
+                      "sink": {
+                        "name": "result.__v",
+                        "physicalType": "long"
+                      }
+                    }
+                  ],
+                  "collectionReference": "",
+                  "typeConversion": true,
+                  "typeConversionSettings": {
+                    "allowDataTruncation": true,
+                    "treatBooleanAsNumber": false
+                  },
+                  "columnFlattenSettings": {
+                    "treatArrayAsString": true,
+                    "treatStructAsString": false,
+                    "flattenColumnDelimiter": "."
+                  }
+                },
+                "enableStaging": false
+              },
+              "policy": {
+                "timeout": "0.12:00:00",
+                "retry": 4,
+                "retryIntervalInSeconds": 30,
+                "secureInput": false,
+                "secureOutput": false
+              },
+              "name": "Films",
+              "dependsOn": []
+            }
+          ]
+        },
+        "name": "Films loop",
+        "dependsOn": []
+      },
+      {
+        "type": "ForEach",
+        "typeProperties": {
+          "isSequential": true,
+          "items": {
+            "value": "@range(4,39)",
+            "type": "Expression"
+          },
+          "activities": [
+            {
+              "type": "Copy",
+              "typeProperties": {
+                "source": {
+                  "type": "RestSource",
+                  "requestMethod": "GET",
+                  "httpRequestTimeout": "00:01:40",
+                  "requestInterval": "00.00:00:00.100",
+                  "datasetSettings": {
+                    "type": "RestResource",
+                    "typeProperties": {
+                      "relativeUrl": {
+                        "value": "vehicles/@{item()}",
+                        "type": "Expression"
+                      }
+                    },
+                    "schema": [],
+                    "externalReferences": {
+                      "connection": "b1aeb3c1-f68e-4af6-9cb4-9ba084778a8f"
+                    },
+                    "annotations": []
+                  }
+                },
+                "sink": {
+                  "type": "LakehouseTableSink",
+                  "tableActionOption": "Append",
+                  "partitionOption": "None",
+                  "datasetSettings": {
+                    "type": "LakehouseTable",
+                    "typeProperties": {
+                      "table": "Vehicles"
+                    },
+                    "schema": [],
+                    "linkedService": {
+                      "name": "Dagobah",
+                      "properties": {
+                        "type": "Lakehouse",
+                        "typeProperties": {
+                          "artifactId": "3534d42a-46a4-4b50-af7f-c766e641c9bf",
+                          "workspaceId": "00000000-0000-0000-0000-000000000000",
+                          "rootFolder": "Tables"
+                        },
+                        "annotations": []
+                      }
+                    },
+                    "annotations": []
+                  }
+                },
+                "translator": {
+                  "type": "TabularTranslator",
+                  "mappings": [
+                    {
+                      "source": {
+                        "name": "message",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "message",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "result.properties.model",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "result.properties.model",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "result.properties.vehicle_class",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "result.properties.vehicle_class",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "result.properties.manufacturer",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "result.properties.manufacturer",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "result.properties.cost_in_credits",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "result.properties.cost_in_credits",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "result.properties.length",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "result.properties.length",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "result.properties.crew",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "result.properties.crew",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "result.properties.passengers",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "result.properties.passengers",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "result.properties.max_atmosphering_speed",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "result.properties.max_atmosphering_speed",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "result.properties.cargo_capacity",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "result.properties.cargo_capacity",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "result.properties.consumables",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "result.properties.consumables",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "result.properties.films",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "result.properties.films",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "result.properties.pilots",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "result.properties.pilots",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "result.properties.created",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "result.properties.created",
+                        "physicalType": "timestamp"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "result.properties.edited",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "result.properties.edited",
+                        "physicalType": "timestamp"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "result.properties.name",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "result.properties.name",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "result.properties.url",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "result.properties.url",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "result.description",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "result.description",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "result._id",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "result._id",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "result.uid",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "result.uid",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "result.__v",
+                        "type": "Int64"
+                      },
+                      "sink": {
+                        "name": "result.__v",
+                        "physicalType": "long"
+                      }
+                    }
+                  ],
+                  "collectionReference": "",
+                  "typeConversion": true,
+                  "typeConversionSettings": {
+                    "allowDataTruncation": true,
+                    "treatBooleanAsNumber": false
+                  },
+                  "columnFlattenSettings": {
+                    "treatArrayAsString": false,
+                    "treatStructAsString": false,
+                    "flattenColumnDelimiter": "."
+                  }
+                },
+                "enableStaging": false
+              },
+              "policy": {
+                "timeout": "0.12:00:00",
+                "retry": 4,
+                "retryIntervalInSeconds": 30,
+                "secureInput": false,
+                "secureOutput": false
+              },
+              "name": "Vehicles",
+              "dependsOn": []
+            }
+          ]
+        },
+        "name": "Vehicles loop",
+        "dependsOn": []
+      },
+      {
+        "type": "InvokePipeline",
+        "typeProperties": {
+          "parameters": {},
+          "waitOnCompletion": true,
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "pipelineId": "9eddbf6d-a01a-4ac3-8639-70346bb597f3",
+          "operationType": "InvokeFabricPipeline"
+        },
+        "externalReferences": {
+          "connection": "6f424312-fdc2-423d-a347-0f83b719dffe"
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "dbt build",
+        "dependsOn": [
+          {
+            "activity": "People loop",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          },
+          {
+            "activity": "Planets loop",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          },
+          {
+            "activity": "Films loop",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          },
+          {
+            "activity": "Vehicles loop",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
